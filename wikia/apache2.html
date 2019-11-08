@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,7 @@
   <!-- Titulo -->
   <title>G2WIKI - Apache2</title>
 </head>
+
 <body>
   <!-- Header -->
   <div class="jumbotron text-center header" style="margin-bottom:0">
@@ -47,7 +49,7 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" href="proxmox.html">Proxmox</a>
             <a class="dropdown-item" href="apache2.html">Apache2</a>
-            <a class="dropdown-item" href="#">DNS</a>
+            <a class="dropdown-item" href="dnsmasq.html">DNS Sencillo</a>
             <a class="dropdown-item" href="#">FTP</a>
             <a class="dropdown-item" href="#">GitHub</a>
           </div>
@@ -71,7 +73,7 @@
             <a class="nav-link active-apache" href="apache2.html">Apache2</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">DNS</a>
+            <a class="nav-link" href="dnsmasq.html">DNS Sencillo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">FTP</a>
@@ -82,7 +84,7 @@
         </ul>
         <hr class="d-sm-none">
       </div>
-      <div class="col-md-12 col-lg-8">
+      <div class="col-md-12 col-lg-8 tutorial">
         <h2>Apache2</h2>
         <h5>Comienzo del tutorial del servicio web</h5>
         <div class="img">
@@ -95,15 +97,36 @@
         <p>Una vez actualizados los paquetes, proseguiremos a usar el comando <b>apt-get install apache2</b>.</p>
         <h5>Paso 2</h5>
         <p>Crearemos nuestro propio sitio avilitado a partir del sitio por defecto que se genera en la instalación, ese archivo se encuentra en el directorio
-        <b>/etc/apache2/sites-enabled</b> con el nombre de <br> <b>000-default.conf</b>.</p>
+          <b>/etc/apache2/sites-enabled</b> con el nombre de <br> <b>000-default.conf</b>.</p>
         <p>Creamos una copia del archivo con el comando <b>cp /etc/apache2/sites-enabled/000-default.conf /etc/apache2/sites-enabled/tusitio.com.conf</b></p>
         <h5>Paso 3</h5>
         <div class="img">
           <img src="../img/apache2/img_paso3.png" alt="G2WIKI" title="Imagen Apache2">
         </div>
         <p>Imagen de muestra del comando: nano /etc/apache2/sites-enabled/tusitio.com.conf</p>
-        <p></p>
-        </div>
+        <p>
+          ServerName <b>ejemplo.com</b> <br>
+          ServerAlias <b>www.ejemplo.com</b> <br>
+          ServerAdmin <b>correo@ejemplo.com</b> <br>
+          <br>
+          DocumentRoot <b>/var/www/ejemplo.com</b> <br>
+          DirectoryIndex <b>index.html</b> o <b>index.php</b>
+        </p>
+        <ul>
+          <li><b>ServerName:</b> nombre del servidor de resolucion de nombres (DNS)</li>
+          <li><b>ServerAlias:</b> alias que se le asigna a la máquina o nodo.</li>
+          <li><b>ServerAdmin:</b> servidor de correo</li>
+          <li><b>DocumentRoot:</b> directorio raiz del sitio web</li>
+          <li><b>DirectoryIndex:</b> archivo principal que carga por defecto el sitio web</li>
+        </ul>
+        <p>Los parámetros <b>ErrorLog</b> y <b>CustomLog</b> son opcionales.</p>
+        <h5>Paso 4</h5>
+        <p>Una vez configurado nuestro archivo de configuración del sitio web, usamos el comando <br><b>apache2ctl configtest</b>
+          para la confirmación de errores.</p>
+        <h5>Paso 5</h5>
+        <p>Para finalizar, reiniciamos el servicio web con el comando <b>/etc/init.d/apache2 restart</b>.</p>
+        <p>Usando un navegador web, accedemos a <b>http://localhost:80/</b> o <b>http://localhost:8088/</b> </p>
+      </div>
     </div>
   </div>
   <!-- FIN - Contenedor central -->
@@ -113,4 +136,5 @@
   </div>
   <!-- FIN - footer  -->
 </body>
+
 </html>

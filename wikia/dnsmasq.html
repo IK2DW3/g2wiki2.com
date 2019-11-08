@@ -12,11 +12,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- FIN - Inicio de los recursos bootstrap necesarios -->
   <!-- Favicon -->
-  <link rel="shortcut icon" href="fav/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../fav/favicon.ico" type="image/x-icon">
   <!-- Hoja de estilos -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
   <!-- Titulo -->
-  <title>G2WIKI - Inicio</title>
+  <title>G2WIKI - DNSMasq</title>
 </head>
 
 <body>
@@ -29,27 +29,27 @@
   </div>
   <!-- FIN - header -->
   <!-- navegador  -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top navegador">
-    <a class="navbar-brand" href="index.html">
-      <img src="img/iconlogo.png" alt="Logo" style="width:40px;">
+  <nav class="navbar navbar-expand-md bg-dnsmasq navbar-dark sticky-top navegador">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../img/iconlogo.png" alt="Logo" style="width:40px;">
     </a>
-    <a class="navbar-brand" href="index.html">G2WIKI</a>
+    <a class="navbar-brand" href="../index.html">G2WIKI</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-      <ul class="navbar-nav ">
+      <ul class="navbar-nav justify-content-end">
         <!-- Links -->
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Inicio</a>
+          <a class="nav-link" href="../index.html">Inicio</a>
         </li>
         <!-- Dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">WIKI</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="wikia/proxmox.html">Proxmox</a>
-            <a class="dropdown-item" href="wikia/apache2.html">Apache2</a>
-            <a class="dropdown-item" href="wikia/dnsmasq.html">DNS</a>
+            <a class="dropdown-item" href="proxmox.html">Proxmox</a>
+            <a class="dropdown-item" href="apache2.html">Apache2</a>
+            <a class="dropdown-item" href="dnsmasq.html">DNS Sencillo</a>
             <a class="dropdown-item" href="#">FTP</a>
             <a class="dropdown-item" href="#">GitHub</a>
           </div>
@@ -62,28 +62,38 @@
   </nav>
   <!-- FIN - navegador  -->
   <!-- Contenedor central -->
-  <div class="container-fluid grid">
-    <!-- Grid automatico -->
+  <div class="container" style="margin-top:30px">
     <div class="row">
-      <div class="col-lg-12">
-        <div class="post post-apache2">
-          <a href="wikia/apache2.html">Apache2</a>
-        </div>
+      <div class="col-md-12 col-lg-4">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="proxmox.html">Proxmox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="apache2.html">Apache2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active-dnsmasq" href="dnsmasq.html">DNS Sencillo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FTP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">GitHub</a>
+          </li>
+        </ul>
+        <hr class="d-sm-none">
       </div>
-      <div class="col-md-12 col-lg-6">
-        <div class="post post-dns">
-          <a href="wikia/dnsmasq.html">DNS</a>
+      <div class="col-md-12 col-lg-8 tutorial">
+        <h2>DNSMasq</h2>
+        <h5>Comienzo del tutorial del servicio de resolución de nombres</h5>
+        <div class="img">
+          <img src="../img/apache2/intro.png" alt="G2WIKI" title="Imagen Apache2">
         </div>
-      </div>
-      <div class="col-md-12 col-lg-6">
-        <div class="post post-ftp">
-          <a href="#">FTP</a>
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <div class="post post-github">
-          <a href="#">GitHub</a>
-        </div>
+        <p>Imagen de muestra montrando el resultado del comando: systemctl status apache2</p>
+        <p>En éste tutorial mostraremos cómo hacer un servidor web sencillo con el recurso Apache2.</p>
+        <h5>Paso 1</h5>
+        <p>Desde una terminal escribiremos el comando <b>apt-get update</b> para actualizar los paquetes.</p>
       </div>
     </div>
   </div>
