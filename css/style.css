@@ -17,6 +17,9 @@
   height: 100%;
   width: 100%;
 }
+.navegador {
+  height: 60px;
+}
 
 .bg-apache {
   background-color: #300030;
