@@ -1,8 +1,83 @@
+/*
+* Inicio de la segunda oja de estilos
+*/
+.header {
+  background-image: url("../img/banner.jpg");
+  background-repeat: repeat-x;
+  height: 200px;
+  padding: 0;
+}
+.header .intro {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-apache {
+  background-color: #300030;
+}
+.bg-proxmox {
+  background-color: #9e1818;
+}
+.active-apache {
+  background-color: #480048;
+  color: #fff;
+}
+.active-proxmox {
+  background-color: #b03838;
+  color: #fff;
+}
+
+div[class*="col"]{
+  padding: 1%;
+}
 .post {
   align-items: center;
-  color: #2d2c2c;
+  background-color: rgba(106, 103, 104, 0.84);
   display: flex;
   font-size: 2em;
   height: 200px;
   justify-content: center;
+}
+.post a {
+  color: #2d2c2c;
+}
+.post-apache2 {
+  background: #fbbfa8 url("../img/apache2/logo.png") no-repeat 50% 30%;
+  background-size: 50px 50px;
+  border-bottom: 2px solid #F07241;
+  padding: 1%;
+}
+.post-dns {
+  background: #8f658f url("../img/dnsmasq/logo.png") no-repeat 39% 50%;
+  background-size: 80px 50px;
+  border-bottom: 2px solid #480048;
+  padding: 1%;
+}
+.post-ftp {
+  background: #e68484 url("../img/proftpd/logo.png") no-repeat 62% 50%;
+  background-size: 80px 50px;
+  border-bottom: 2px solid #fe0000;
+  padding: 1%;
+}
+.post-github {
+  background: #b5b2b2 url("../img/github/logo.png") no-repeat 50% 77%;
+  background-size: 55px 50px;
+  border-bottom: 2px solid #000;
+  padding: 1%;
+}
+
+.img {
+  height: 250px;
+  width: 100%;
+}
+.img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
