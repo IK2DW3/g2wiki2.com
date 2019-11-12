@@ -64,6 +64,12 @@ div[class*="col"]{
 .post a {
   color: #2d2c2c;
 }
+.post-proxmox {
+  background: #f18787 url("../img/proxmox/logo.png") no-repeat 50% 30%;
+  background-size: 50px 50px;
+  border-bottom: 2px solid #830000;
+  padding: 1%;
+}
 .post-apache2 {
   background: #fbbfa8 url("../img/apache2/logo.png") no-repeat 50% 30%;
   background-size: 50px 50px;
@@ -77,9 +83,9 @@ div[class*="col"]{
   padding: 1%;
 }
 .post-ftp {
-  background: #e68484 url("../img/proftpd/logo.png") no-repeat 62% 50%;
+  background: #fdff82 url("../img/proftpd/logo.png") no-repeat 62% 50%;
   background-size: 80px 50px;
-  border-bottom: 2px solid #fe0000;
+  border-bottom: 2px solid #ffee00;
   padding: 1%;
 }
 .post-github {
