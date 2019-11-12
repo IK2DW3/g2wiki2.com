@@ -20,6 +20,9 @@
 .navegador {
   height: 60px;
 }
+.stickyNav {
+  position: sticky;
+}
 
 .bg-apache {
   background-color: #F07241;
