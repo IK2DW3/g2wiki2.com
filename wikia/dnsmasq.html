@@ -16,14 +16,14 @@
   <!-- Hoja de estilos -->
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <!-- Titulo -->
-  <title>G2WIKI - DNSMasq</title>
+  <title>G2WIKI2 - DNSMasq</title>
 </head>
 
 <body>
   <!-- Header -->
   <div class="jumbotron text-center header" style="margin-bottom:0">
     <div class="intro">
-      <h1>G2WIKI</h1>
+      <h1>G2WIKI2</h1>
       <p>Las bestias del aprendizaje lento</p>
     </div>
   </div>
@@ -33,7 +33,7 @@
     <a class="navbar-brand" href="../index.html">
       <img src="../img/iconlogo.png" alt="Logo" style="width:40px;">
     </a>
-    <a class="navbar-brand" href="../index.html">G2WIKI</a>
+    <a class="navbar-brand" href="../index.html">G2WIKI2</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -83,6 +83,27 @@
         <p>En éste tutorial mostraremos cómo hacer un servidor web sencillo con el recurso Apache2.</p>
         <h5>Paso 1</h5>
         <p>Desde una terminal escribiremos el comando <b>apt-get update</b> para actualizar los paquetes.</p>
+        <p>Una vez actualizados los paquetes utilizaremos el comando <b>apt-get install dnsmasq</b>.</p>
+
+        <h5>Paso 2</h5>
+        <p>Indicaremos los dns caché a los que debe acudir en el fichero: <b>nano /etc/resolv.dnsmasq.conf</b>.</p>
+        <p>Añadimos la línea <b>nameserver 10.9.55.3</b>.</p>
+
+        <h5>Paso 3</h5>
+        <p>Editamos la línea <b>#resolv-file=</b> y la dejamos de la siguinte manera: <b>resolv-file=/etc/resolv.dnsmasq.conf</b>.</p>
+
+        <h5>Paso 4</h5>
+        <p>Cambiamos el archivo <b>/etc/resolv.conf</b> del servidor y le ponemos la IP de nuestro servidor.</p>
+        <p><b>nano /etc/resolv.conf</b></p>
+        <p><b>nameserver 127.0.0.1</b></p>
+
+        <h5>Paso 6</h5>
+        <p>En el fichero <b>etc/hosts</b> escribimos:</p>
+        <p><b>10.9.52.107 www.g2wiki2.com</b></p>
+
+        <h5>Paso 7</h5>
+        <p>Siempre que agreguemos una línea en el fichero <b>/etc/hosts</b>, tenemos que reiniciar el servicio.</p>
+        <p><b>service dnsmasq restart</b></p>
       </div>
     </div>
   </div>
