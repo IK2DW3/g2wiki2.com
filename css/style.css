@@ -2,8 +2,8 @@
 * Inicio de la segunda oja de estilos
 */
 .header {
-  background-image: url("../img/banner.jpg");
-  background-repeat: repeat-x;
+  background-image: url("../img/banner.PNG");
+  background-size: cover;
   height: 200px;
   padding: 0;
 }
