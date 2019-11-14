@@ -117,3 +117,10 @@ div[class*="col"]{
   width: 100%;
   object-fit: cover;
 }
+
+.volver-arriba {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+}

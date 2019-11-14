@@ -11,6 +11,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- FIN - Inicio de los recursos bootstrap necesarios -->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="../js/app.js"></script>
   <!-- Favicon -->
   <link rel="shortcut icon" href="../fav/favicon.ico" type="image/x-icon">
   <!-- Hoja de estilos -->
@@ -86,25 +88,31 @@
         <p>Despues escribiremos <b>apt-get install proftpd</b> para instalar el servicio.</p>
         <h5>Paso 2</h5>
         <p>Creamos un usuario con el cual usaremos para iniciar sesión en FTP mediante web o la aplicación FileZilla.</p>
-        <p>Usamos la siguiente instrucción: <br> <b>adduser < usuario > -shell /bin/false -home "< direccion-carpeta >"</b> </p>
+        <p>Usamos la siguiente instrucción: <br> <b>adduser < usuario> -shell /bin/false -home "< direccion-carpeta>"</b> </p>
         <p>Nos pedirá que rellenemos al información sobre el nuevo usuario, lo mas importante es poner la contraseña y confirmarla. </p>
         <h5>Paso 3</h5>
         <p>Ahora configuraremos el archivo <b>proftpd.conf</b> que se encuentra en <b>/etc/proftpd/</b> usando la instrucción
-        <b>nano /etc/proftpd/proftpd.conf</b></p>
+          <b>nano /etc/proftpd/proftpd.conf</b></p>
         <p>Añadiremos las siguientes lineas al final del archivo: <br>
-          <b>< Global ></b><br>
+          <b>
+            < Global>
+          </b><br>
           <b>RootLogin off</b><br>
           <b>RequireValidShell off</b><br>
-          <b>< /Global ></b></p>
-        <p>Guardamos, cerramos el archivo y reiniciamos el servicio: <b>service proftpd restart</b> </p>
+          <b>
+            < /Global> </b> </p> <p>Guardamos, cerramos el archivo y reiniciamos el servicio: <b>service proftpd restart</b> </p>
         <h5>Paso 4</h5>
-        <p>Cambiar los permisos del directorio para el uso del usuario: <b>chown -R < usuario > < direccion > </b></p>
+        <p>Cambiar los permisos del directorio para el uso del usuario: <b>chown -R < usuario>
+              < direccion> </b></p>
         <h5>Paso 5</h5>
         <p>Probar la conexión con la aplicación <b>FileZilla</b> o <b>ftp://ipservidor</b></p>
       </div>
     </div>
   </div>
   <!-- FIN - Contenedor central -->
+  <a id="back-to-top" href="#" class="btn btn-light btn-lg volver-arriba" role="button">
+    <ion-icon name="arrow-round-up"></ion-icon>
+  </a>
   <!-- footer  -->
   <div class="jumbotron text-center" style="margin-bottom:0">
     <p>2019 &copy; Con la tecnologia de nuestra imaginación <a href="https://github.com/IK2DW3" target="_blank">RD</a></p>
