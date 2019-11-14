@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Inicio de los recursos bootstrap necesarios -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- FIN - Inicio de los recursos bootstrap necesarios -->
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../fav/favicon.ico" type="image/x-icon">
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <!-- Titulo -->
+  <title>G2WIKI2 - GitHub</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="jumbotron text-center header" style="margin-bottom:0">
+    <div class="intro">
+      <h1>G2WIKI2</h1>
+      <p>Las bestias del aprendizaje lento</p>
+    </div>
+  </div>
+  <!-- FIN - header -->
+  <!-- navegador  -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top navegador">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../img/iconlogo.png" alt="Logo" style="width:40px;">
+    </a>
+    <a class="navbar-brand" href="../index.html">G2WIKI2</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+      <ul class="navbar-nav justify-content-end">
+        <!-- Links -->
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ftp://10.9.52.106" target="_blank">FTP Connect</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- FIN - navegador  -->
+  <!-- Contenedor central -->
+  <div class="container" style="margin-top:30px">
+    <div class="row">
+      <div class="col-md-12 col-lg-4">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="proxmox.html">Proxmox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="apache2.html">Apache2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dnsmasq.html">DNS Sencillo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="proftpd.html">ProFTPD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active-github" href="github.html">GitHub</a>
+          </li>
+        </ul>
+        <hr class="d-sm-none">
+      </div>
+      <div class="col-md-12 col-lg-8 tutorial">
+        <h2>GitHub</h2>
+        <h5>Tutorial de cómo actualizar tu web sin necesidad de WebHooks</h5>
+        <div class="img">
+          <img src="../img/github/intro.PNG" alt="G2WIKI" title="Imagen GitHub">
+        </div>
+        <p>Imagen representativa</p>
+        <p>En éste tutorial mostraremos cómo actualizar tu web mediante script.</p>
+        <h5>Paso 1</h5>
+        <p>Desde una terminal escribiremos el comando <b>apt-get update</b> para actualizar los paquetes.</p>
+        <p>Una vez actualizados los paquetes utilizaremos el comando <b>apt-get install git</b>.</p>
+        <h5>Paso 2</h5>
+        <p>Configuraremos los parámetros iniciales</p>
+        <p><b>git config --global user.name "nombreusuariogithub"</b></p>
+        <p><b>git config --global user.email "emaildecuentagit"</b></p>
+        <h5>Paso 3</h5>
+        <p>Creamos una carpeta llamada <b>scripts</b> en nuestro directorio <b>/home</b> con el comando <br> <b>mkdir -p /home/scripts</b></p>
+        <p>Dentro de la carpeta, creamos el archivo con <b>nano /home/scripts/git.sh</b></p>
+        <p>
+          <b>#Inicio del script</b> <br>
+          #!/bin/bash <br>
+          cd rutadelrepositorioweb <br>
+          <b>#Ejecutamos los comandos de actualización</b> <br>
+          git fetch origin master <br>
+          git merge origin master <br>
+          <b># Finalizamo el script</b> <br>
+          exit <br>
+        </p>
+        <h5>Paso 4</h5>
+        <p>Ahora añadiremos el archivo script al sistema crontab</p>
+        <p>Usamos el comando <b>crontab -e</b>, al final del archivo añadimos:</p>
+        <p><b>*/1 * * * * /home/scripts/git.sh</b> <br><br>Guardamos y salimos</p>
+        <h5>Paso 5</h5>
+        <p>Disfruta del coding</p>
+      </div>
+    </div>
+  </div>
+  <!-- FIN - Contenedor central -->
+  <!-- footer  -->
+  <div class="jumbotron text-center" style="margin-bottom:0">
+    <p>2019 &copy; Con la tecnologia de nuestra imaginación <a href="https://github.com/IK2DW3" target="_blank">RD</a></p>
+  </div>
+  <!-- FIN - footer  -->
+</body>
+
+</html>

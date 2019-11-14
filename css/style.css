@@ -34,12 +34,12 @@
   background-color: #bd9900;
   color: #000;
 }
-.active-apache {
-  background-color: #F07241;
-  color: #fff;
-}
 .active-proxmox {
   background-color: #b03838;
+  color: #fff;
+}
+.active-apache {
+  background-color: #F07241;
   color: #fff;
 }
 .active-dnsmasq {
@@ -49,6 +49,17 @@
 .active-proftpd {
   background-color: #d6af09;
   color: #000;
+}
+.active-github {
+  background-color: #666666;
+  color: #fff;
+}
+.active-github:hover,
+.active-proxmox:hover,
+.active-apache:hover,
+.active-dnsmasq:hover,
+.active-proftpd:hover {
+  color: #e0e0e0;
 }
 
 div[class*="col"]{
