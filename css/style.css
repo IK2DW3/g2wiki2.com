@@ -34,7 +34,8 @@
   background-color: #300e30;
 }
 .bg-proftpd {
-  background-color: #5b1010;
+  background-color: #bd9900;
+  color: #000;
 }
 .active-apache {
   background-color: #F07241;
@@ -49,8 +50,8 @@
   color: #fff;
 }
 .active-proftpd {
-  background-color: #830000;
-  color: #fff;
+  background-color: #d6af09;
+  color: #000;
 }
 
 div[class*="col"]{
