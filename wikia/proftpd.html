@@ -83,13 +83,16 @@
         </div>
         <p>Imagen de muestra montrando el resultado del comando: systemctl status proftpd</p>
         <p>En éste tutorial mostraremos cómo hacer un servidor de comparticion de archivos con el recurso ProFTPD.</p>
+
         <h5>Paso 1</h5>
         <p>Desde una terminal escribiremos el comando <b>apt-get update</b> para actualizar los paquetes.</p>
         <p>Despues escribiremos <b>apt-get install proftpd</b> para instalar el servicio.</p>
+
         <h5>Paso 2</h5>
         <p>Creamos un usuario con el cual usaremos para iniciar sesión en FTP mediante web o la aplicación FileZilla.</p>
         <p>Usamos la siguiente instrucción: <br> <b>adduser < usuario> -shell /bin/false -home "< direccion-carpeta>"</b> </p>
         <p>Nos pedirá que rellenemos al información sobre el nuevo usuario, lo mas importante es poner la contraseña y confirmarla. </p>
+
         <h5>Paso 3</h5>
         <p>Ahora configuraremos el archivo <b>proftpd.conf</b> que se encuentra en <b>/etc/proftpd/</b> usando la instrucción
           <b>nano /etc/proftpd/proftpd.conf</b></p>
@@ -101,11 +104,20 @@
           <b>RequireValidShell off</b><br>
           <b>
             < /Global> </b> </p> <p>Guardamos, cerramos el archivo y reiniciamos el servicio: <b>service proftpd restart</b> </p>
+
         <h5>Paso 4</h5>
         <p>Cambiar los permisos del directorio para el uso del usuario: <b>chown -R < usuario>
               < direccion> </b></p>
+
         <h5>Paso 5</h5>
         <p>Probar la conexión con la aplicación <b>FileZilla</b> o <b>ftp://ipservidor</b></p>
+        <pre></pre>
+        <h5>Video representativo</h5>
+        <pre>
+          <div class="video-responsive">
+            <iframe src="https://www.youtube.com/embed/cqkdD7slHBw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </pre>
       </div>
     </div>
   </div>

@@ -118,6 +118,16 @@ div[class*="col"]{
   object-fit: cover;
 }
 
+.video-responsive {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.video-responsive iframe {
+  height: 400px;
+  flex-basis: 100%;
+}
+
 .volver-arriba {
   position: fixed;
   bottom: 25px;

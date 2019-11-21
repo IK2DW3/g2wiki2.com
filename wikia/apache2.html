@@ -83,13 +83,16 @@
         </div>
         <p>Imagen de muestra montrando el resultado del comando: systemctl status apache2</p>
         <p>En éste tutorial mostraremos cómo hacer un servidor web sencillo con el recurso Apache2.</p>
+
         <h5>Paso 1</h5>
         <p>Desde una terminal escribiremos el comando <b>apt-get update</b> para actualizar los paquetes.</p>
         <p>Una vez actualizados los paquetes, proseguiremos a usar el comando <b>apt-get install apache2</b>.</p>
+
         <h5>Paso 2</h5>
         <p>Crearemos nuestro propio sitio habilitado a partir del sitio por defecto que se genera en la instalación, ese archivo se encuentra en el directorio
           <b>/etc/apache2/sites-enabled</b> con el nombre de <br> <b>000-default.conf</b>.</p>
         <p>Creamos una copia del archivo con el comando <b>cp /etc/apache2/sites-enabled/000-default.conf /etc/apache2/sites-enabled/tusitio.com.conf</b></p>
+
         <h5>Paso 3</h5>
         <div class="img">
           <img src="../img/apache2/img_paso3.PNG" alt="G2WIKI" title="Imagen Apache2">
@@ -111,12 +114,20 @@
           <li><b>DirectoryIndex:</b> archivo principal que carga por defecto el sitio web</li>
         </ul>
         <p>Los parámetros <b>ErrorLog</b> y <b>CustomLog</b> son opcionales.</p>
+
         <h5>Paso 4</h5>
         <p>Una vez configurado nuestro archivo de configuración del sitio web, usamos el comando <br><b>apache2ctl configtest</b>
           para la confirmación de errores.</p>
         <h5>Paso 5</h5>
         <p>Para finalizar, reiniciamos el servicio web con el comando <b>/etc/init.d/apache2 restart</b>.</p>
         <p>Usando un navegador web, accedemos a <b>http://localhost:80/</b> o <b>http://localhost:8088/</b> </p>
+        <pre></pre>
+        <h5>Video representativo</h5>
+        <pre>
+          <div class="video-responsive">
+            <iframe src="https://www.youtube.com/embed/koVto_Lt3eY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </pre>
       </div>
     </div>
   </div>
